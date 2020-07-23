@@ -49,7 +49,7 @@ class crowel:
         cursor.executemany("""INSERT INTO ClearedAlarms (Device, InverterName, Alarm, Occurancetime, Message) 
                   VALUES(%(dev_name)s,%(inv_name)s,%(alarm_id)s,%(date_time)s,%(alarm_msg)s)""", logdata)
         dbConnection.commit()
-        print("affected rows = {}".format(cursor.rowcount))
+        #print("Row Added into the DB = {}".format(cursor.rowcount))
 
 obj=crowel()
 obj.login_req()
